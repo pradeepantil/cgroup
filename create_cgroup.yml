@@ -1,7 +1,0 @@
----
-- name: create cgroup with raw module
-  hosts: localhost
-  become: true
-  tasks:
-  - name: raw module 
-    raw: cgcreate -a matthew:matthew -t matthew:matthew -g cpuacct,memory,pids:station15_stats
