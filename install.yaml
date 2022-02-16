@@ -1,0 +1,14 @@
+---
+- name: Install and Copy file 
+  hosts: localhost
+  become: true
+  tasks:
+  - name: install net-tools pkg
+    dnf:
+      name: net-tools
+      state: installed
+
+  - name: copy passwd to /tmp
+    copy:
+      src: /etc/passwd
+      dest: /tmp
